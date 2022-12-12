@@ -24,4 +24,5 @@ nome, endereço, telefone, CPF e salário.
 - Para cada disciplina é necessário registrar seu código, nome e carga horária.
 
 [Desenvolver o diagrama de classes (relações, atributos e métodos)]
+
 [Criar o banco de dados e mostrar vinculação (criar, alterar, editar e excluir)]
