@@ -1,5 +1,5 @@
 # Sistema de Gestão Acadêmica
-Atividade da matéria Coding da faculdade Senac
+Atividade da matéria de Coding da faculdade Senac
 
 Alunos:
 - Karolayne Silva
