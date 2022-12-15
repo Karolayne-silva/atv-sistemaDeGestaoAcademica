@@ -1,7 +1,7 @@
 # Sistema de Gestão Acadêmica
 Atividade da matéria de Coding da faculdade Senac
 
-Alunos:
+Colaboradores:
 - Karolayne Silva
 - Maiara Meneses
 - Gilmar Adrian
