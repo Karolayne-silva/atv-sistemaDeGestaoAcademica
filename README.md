@@ -1,5 +1,5 @@
 # Sistema de Gestão Acadêmica
-Atividade da matéria de Coding da faculdade Senac
+Atividade de fechamento da matéria de Coding II da Faculdade Senac/PE
 
 Colaboradores:
 - Karolayne Silva
@@ -26,3 +26,12 @@ nome, endereço, telefone, CPF e salário.
 [Desenvolver o diagrama de classes (relações, atributos e métodos)]
 
 [Criar o banco de dados e mostrar vinculação (criar, alterar, editar e excluir)]
+
+
+
+# Projeto
+
+## UML - Diagrama de classes
+
+![Diagrama de classes para sistema acadêmico](/Modelagem de classes/EQ3-UML-IMG-Gestao_academico.png)
+
