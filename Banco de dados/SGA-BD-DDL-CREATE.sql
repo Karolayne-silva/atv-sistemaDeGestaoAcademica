@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema SGA
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema SGA
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `SGA` DEFAULT CHARACTER SET utf8 ;
+USE `SGA` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Funcionario`
+-- Table `SGA`.`Funcionario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Funcionario` (
+CREATE TABLE IF NOT EXISTS `SGA`.`Funcionario` (
   `cpf` CHAR(11) NOT NULL,
   `nome` VARCHAR(90) NOT NULL,
   `endereco` VARCHAR(120) NULL,
@@ -28,16 +28,16 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Professor`
+-- Table `SGA`.`Professor`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Professor` (
+CREATE TABLE IF NOT EXISTS `SGA`.`Professor` (
   `titulacao` VARCHAR(45) NULL,
   `area_formacao` VARCHAR(45) NULL,
   `Funcionario_cpf` CHAR(11) NOT NULL,
   PRIMARY KEY (`Funcionario_cpf`),
   CONSTRAINT `fk_Professor_Funcionario`
     FOREIGN KEY (`Funcionario_cpf`)
-    REFERENCES `mydb`.`Funcionario` (`cpf`)
+    REFERENCES `SGA`.`Funcionario` (`cpf`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -45,23 +45,23 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Tecnico_administrativo`
+-- Table `SGA`.`Tecnico_administrativo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Tecnico_administrativo` (
+CREATE TABLE IF NOT EXISTS `SGA`.`Tecnico_administrativo` (
   `Funcionario_cpf` CHAR(11) NOT NULL,
   PRIMARY KEY (`Funcionario_cpf`),
   CONSTRAINT `fk_Tecnico_administrativo_Funcionario1`
     FOREIGN KEY (`Funcionario_cpf`)
-    REFERENCES `mydb`.`Funcionario` (`cpf`)
+    REFERENCES `SGA`.`Funcionario` (`cpf`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Curso`
+-- Table `SGA`.`Curso`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Curso` (
+CREATE TABLE IF NOT EXISTS `SGA`.`Curso` (
   `codigo` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `duracao` INT NOT NULL,
@@ -70,9 +70,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Disciplina`
+-- Table `SGA`.`Disciplina`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Disciplina` (
+CREATE TABLE IF NOT EXISTS `SGA`.`Disciplina` (
   `codigo` VARCHAR(8) NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `carga_horaria` INT NOT NULL,
@@ -83,21 +83,21 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Disciplina` (
   INDEX `fk_Disciplina_Curso1_idx` (`Curso_codigo` ASC) VISIBLE,
   CONSTRAINT `fk_Disciplina_Professor1`
     FOREIGN KEY (`Professor_Funcionario_cpf`)
-    REFERENCES `mydb`.`Professor` (`Funcionario_cpf`)
+    REFERENCES `SGA`.`Professor` (`Funcionario_cpf`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Disciplina_Curso1`
     FOREIGN KEY (`Curso_codigo`)
-    REFERENCES `mydb`.`Curso` (`codigo`)
+    REFERENCES `SGA`.`Curso` (`codigo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Aluno`
+-- Table `SGA`.`Aluno`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Aluno` (
+CREATE TABLE IF NOT EXISTS `SGA`.`Aluno` (
   `cpf` CHAR(11) NOT NULL,
   `nome` VARCHAR(90) NOT NULL,
   `matricula` VARCHAR(15) NOT NULL,
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Aluno` (
   INDEX `fk_Aluno_Curso1_idx` (`Curso_codigo` ASC) VISIBLE,
   CONSTRAINT `fk_Aluno_Curso1`
     FOREIGN KEY (`Curso_codigo`)
-    REFERENCES `mydb`.`Curso` (`codigo`)
+    REFERENCES `SGA`.`Curso` (`codigo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
