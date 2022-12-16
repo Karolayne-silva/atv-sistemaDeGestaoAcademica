@@ -7,4 +7,28 @@ class Professor(Funcionario):
         self.titulacao = titulacao
         self.areaFormacao = areaFormacao
     
+    def cadastrar(self):
+        c = ConexaoDB()
+        comando = f"insert into professor (nome, endereco, telefone, cpf, salario, titulacao, areaFormacao) values ('{self.nome}','{self.endereco}', '{self.telefone}', '{self.cpf}', '{self.salario}', '{self.titulacao}', '{self.areaFormacao})"
+        c.executarDML(comando)
+
+
+    def alterar(self, nome, cpf):
+        c = ConexaoDB()
+        comando = f"update professor set nome ='{nome}' where cpf='{cpf}'"
+        c.executarDML(comando)
+    
+
+    def excluir(self, cpf):
+        c = ConexaoDB()
+        comando = f"delete from professor where cpf='{cpf}'"
+        c.executarDML(comando)
+
+
+    def consultar(self, cpf):
+        c = ConexaoDB()
+        comando = f"select * from professor where cpf='{cpf}'"
+        resultado = c.executarDQL(comando)
+        return resultado
+
     
