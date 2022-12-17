@@ -40,8 +40,7 @@ CREATE TABLE IF NOT EXISTS `SGA`.`Professor` (
     REFERENCES `SGA`.`Funcionario` (`cpf`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
