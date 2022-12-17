@@ -62,7 +62,6 @@ CREATE TABLE IF NOT EXISTS `SGA`.`Disciplina` (
   `codigo` VARCHAR(8) NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `carga_horaria` INT NOT NULL,
-  `Curso_codigo` INT NOT NULL,
   PRIMARY KEY (`codigo`))
 ENGINE = InnoDB;
 
