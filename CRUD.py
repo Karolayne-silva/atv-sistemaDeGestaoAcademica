@@ -90,10 +90,10 @@ def con():
 ##cpf = input("Digite o seu CPF:")
 ##curso = input("Digite o curso que está matriculado:")
 
-/* def __init__(self):
-        pass 
+# def __init__(self):
+        ##pass 
     
-    def read(self):
-        print("Escolha uma das opções para visualizar\n")
-        print("\n 1 - Funcionários\n 2 - Aluno\n 3 - Curso\n 4 - Disciplina")
-        escolha2 = int(input("\nEscolha: "))*/
+#    def read(self):
+        #print("Escolha uma das opções para visualizar\n")
+        #print("\n 1 - Funcionários\n 2 - Aluno\n 3 - Curso\n 4 - Disciplina")
+        #escolha2 = int(input("\nEscolha: "))
