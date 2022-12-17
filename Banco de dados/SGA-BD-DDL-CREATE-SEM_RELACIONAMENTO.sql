@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `SGA`.`Aluno` (
   `cpf` CHAR(11) NOT NULL,
   `nome` VARCHAR(90) NOT NULL,
   `matricula` VARCHAR(15) NOT NULL,
-  `Curso_codigo` INT NOT NULL,
+  `Curso` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`cpf`),
   UNIQUE INDEX `matricula_UNIQUE` (`matricula` ASC) VISIBLE)
 ENGINE = InnoDB;
