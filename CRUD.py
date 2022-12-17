@@ -69,11 +69,11 @@ cad('digite o nome', 'digite curso', 'digite matricula')
             aluno.cadastrar()
 
 def alt():
-
+    pass
 def exc():
-
+    pass
 def con():
-
+    pass
 
 # todo o codígo de CRUD 
 # create
@@ -89,4 +89,5 @@ def con():
 ##matricula = input("Digite a matrícula do(a) aluno(a)")
 ##cpf = input("Digite o seu CPF:")
 ##curso = input("Digite o curso que está matriculado:")
+
 
