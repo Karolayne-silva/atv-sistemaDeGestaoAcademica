@@ -8,3 +8,23 @@ class Funcionario:
         self.cpf = cpf
         self.salario = salario
     
+    def cadastrar(self):
+        c = ConexaoDB()
+        comando = "editar"
+        c.executarDML(comando)
+
+    def alterar(self):
+        c = ConexaoDB
+        comando = "editar"
+        c.executarDML(comando)
+
+    def excluir(self):
+        c = ConexaoDB()
+        comando = "editar"
+        c.executarDML(comando)
+
+    def consultar(self):
+        c = ConexaoDB()
+        comando = "editar"
+        resultado = c.executarDQL(comando)
+        return resultado
