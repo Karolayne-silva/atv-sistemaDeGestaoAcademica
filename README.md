@@ -33,5 +33,7 @@ nome, endereço, telefone, CPF e salário.
 
 ## UML - Diagrama de classes
 
-![Diagrama de classes para sistema acadêmico](/Modelagem de classes/EQ3-UML-IMG-Gestao_academico.png)
+![Diagrama de classes para sistema acadêmico](https://github.com/Karolayne-silva/atv-sistemaDeGestaoAcademica/blob/dffeca895ee20f83db72f4b215886a3922bb00a6/Modelagem%20de%20classes/EQ3-UML-IMG-Gestao_academico.png)
 
+## MER - Modelo entidade relacionamento
+![Diagrama do Banco de Dados Entidade Relacionamento](https://github.com/Karolayne-silva/atv-sistemaDeGestaoAcademica/blob/dffeca895ee20f83db72f4b215886a3922bb00a6/Banco%20de%20dados/MER.svg)
