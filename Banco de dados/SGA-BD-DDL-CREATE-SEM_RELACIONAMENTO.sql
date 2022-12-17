@@ -91,27 +91,6 @@ CREATE TABLE IF NOT EXISTS `SGA`.`Aluno` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `SGA`.`Periodo`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `SGA`.`Periodo` (
-  `Disciplina_codigo` VARCHAR(8) NOT NULL,
-  `Aluno_cpf` CHAR(11) NOT NULL,
-  PRIMARY KEY (`Disciplina_codigo`, `Aluno_cpf`),
-  INDEX `fk_Periodo_Aluno1_idx` (`Aluno_cpf` ASC) VISIBLE,
-  CONSTRAINT `fk_Periodo_Disciplina1`
-    FOREIGN KEY (`Disciplina_codigo`)
-    REFERENCES `SGA`.`Disciplina` (`codigo`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Periodo_Aluno1`
-    FOREIGN KEY (`Aluno_cpf`)
-    REFERENCES `SGA`.`Aluno` (`cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
