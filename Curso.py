@@ -1,7 +1,7 @@
 from conexaoDB import *
 
 class Curso:
-    def __init__(self, codigo, nome, duracao, professor_funcionario_cpf, curso_codigo):
+    def __init__(self, codigo, nome, duracao):
         self.codigo = codigo
         self.nome = nome
         self.duracao = duracao

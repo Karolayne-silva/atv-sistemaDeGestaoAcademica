@@ -2,31 +2,34 @@ from conexaoDB import *
 from Funcionario import Funcionario
 
 class TecnAdministrativo(Funcionario):
-    def __init__(self, nome, endereco, telefone,cpf, salario, funcionario_cpf):
-        super().__init__(self, nome, endereco, telefone, cpf, salario)
-        self.funcionario_cpf = funcionario_cpf
+    def __init__(self, nome, endereco, telefone, cpf, salario):
+        self.nome = nome
+        self.endereco = endereco
+        self.telefone = telefone
+        self.cpf = cpf
+        self.salario = salario
 
     def cadastrar(self):
         c = ConexaoDB()
-        comando = f"insert into tecnAdministrativo (nome, endereco, telefone, cpf, salario) values ('{self.nome}','{self.endereco}', '{self.telefone}', '{self.cpf}', '{self.salario}', '{self.funcionario_cpf}')"
+        comando = f"insert into tecnico_administrativo (nome, endereco, telefone, cpf, salario) values ('{self.nome}','{self.endereco}', '{self.telefone}', '{self.cpf}', '{self.salario}')"
         c.executarDML(comando)
 
 
     def alterar(self, nome, cpf):
         c = ConexaoDB()
-        comando = f"update tecnAdministrativo set nome ='{nome}' where cpf='{cpf}'"
+        comando = f"update tecnico_administrativoset nome ='{nome}' where cpf='{cpf}'"
         c.executarDML(comando)
     
 
     def excluir(self, cpf):
         c = ConexaoDB()
-        comando = f"delete from tecnAdministrativo where cpf='{cpf}'"
+        comando = f"delete from tecnico_administrativo where cpf='{cpf}'"
         c.executarDML(comando)
 
 
     def consultar(self, cpf):
         c = ConexaoDB()
-        comando = f"select * from tcnAdministrativo where cpf='{self.cpf}'"
+        comando = f"select * from tecnico_administrativo where cpf='{self.cpf}'"
         resultado = c.executarDQL(comando)
         return resultado
     

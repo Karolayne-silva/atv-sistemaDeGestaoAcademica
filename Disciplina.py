@@ -2,16 +2,14 @@ from conexaoDB import *
 
 class Disciplina:
 
-    def __init__(self, codigo, nome, cargaHoraria, professor_funcionario_cpf, curso_codigo):
+    def __init__(self, codigo, nome, carga_horaria):
         self.codigo = codigo
         self.nome = nome
-        self.cargaHoraria = cargaHoraria
-        self.professor_funcionario_cpf = professor_funcionario_cpf
-        self.curso_codigo = curso_codigo
+        self.carga_horaria = carga_horaria
 
     def cadastrar(self):
         c = ConexaoDB()
-        comando = f"insert into disciplina (codigo, nome, cargaHoraria) values ('{self.codigo}','{self.nome}', '{self.cargaHoraria}', '{self.professor_funcionario_cpf}', '{self.curso_codigo}')"
+        comando = f"insert into disciplina (codigo, nome, carga_horaria) values ('{self.codigo}','{self.nome}', '{self.carga_horaria}')"
         c.executarDML(comando)
 
 
