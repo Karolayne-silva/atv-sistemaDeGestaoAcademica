@@ -1,7 +1,7 @@
 import mysql.connector
 
 class ConexaoDB:
-    def __init__(self, host="localhost", user="root", password="teste", database = "oxe"):
+    def __init__(self, host="localhost", user="root", password="teste", database ="sga"):
         self.host = host
         self.user = user
         self.password = password

@@ -5,11 +5,12 @@ class Curso:
         self.codigo = codigo
         self.nome = nome
         self.duracao = duracao
+     
     
 
     def cadastrar(self):
         c = ConexaoDB()
-        comando = f"insert into curso (codigo, nome, duracao) values ('{self.nome}','{self.codigo}', '{self.duracao}')"
+        comando = f"insert into curso (codigo, nome, duracao) values ('{self.codigo}','{self.nome}', '{self.duracao}')"
         c.executarDML(comando)
 
 
