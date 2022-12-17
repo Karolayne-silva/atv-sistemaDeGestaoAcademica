@@ -2,12 +2,13 @@ from conexaoDB import *
 from Funcionario import Funcionario
 
 class TecnAdministrativo(Funcionario):
-    def __init__(self, nome, endereco, telefone,cpf, salario):
+    def __init__(self, nome, endereco, telefone,cpf, salario, funcionario_cpf):
         super().__init__(self, nome, endereco, telefone, cpf, salario)
+        self.funcionario_cpf = funcionario_cpf
 
     def cadastrar(self):
         c = ConexaoDB()
-        comando = f"insert into tecnAdministrativo (nome, endereco, telefone, cpf, salario) values ('{self.nome}','{self.endereco}', '{self.telefone}', '{self.cpf}', '{self.salario}')"
+        comando = f"insert into tecnAdministrativo (nome, endereco, telefone, cpf, salario) values ('{self.nome}','{self.endereco}', '{self.telefone}', '{self.cpf}', '{self.salario}', '{self.funcionario_cpf}')"
         c.executarDML(comando)
 
 

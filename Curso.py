@@ -1,15 +1,16 @@
 from conexaoDB import *
 
 class Curso:
-    def __init__(self, codigo, nome, duracao):
+    def __init__(self, codigo, nome, duracao, professor_funcionario_cpf, curso_codigo):
         self.codigo = codigo
         self.nome = nome
         self.duracao = duracao
+     
     
 
     def cadastrar(self):
         c = ConexaoDB()
-        comando = f"insert into curso (codigo, nome, duracao) values ('{self.nome}','{self.codigo}', '{self.duracao}')"
+        comando = f"insert into curso (codigo, nome, duracao) values ('{self.codigo}','{self.nome}', '{self.duracao}')"
         c.executarDML(comando)
 
 
