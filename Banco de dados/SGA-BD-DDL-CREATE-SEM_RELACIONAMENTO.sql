@@ -14,18 +14,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 CREATE SCHEMA IF NOT EXISTS `SGA` ;
 USE `SGA` ;
 
--- -----------------------------------------------------
--- Table `SGA`.`Funcionario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `SGA`.`Funcionario` (
-  `cpf` CHAR(11) NOT NULL,
-  `nome` VARCHAR(90) NOT NULL,
-  `endereco` VARCHAR(120) NULL,
-  `telefone` VARCHAR(11) NULL,
-  `salario` DECIMAL(7,2) NOT NULL,
-  PRIMARY KEY (`cpf`))
-ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `SGA`.`Professor`
