@@ -34,7 +34,7 @@ nome, endereço, telefone, CPF e salário.
 ## UML - Diagrama de classes
 
 <p align="center">
-  <img src="Modelagem de classes/EQ3-UML-Gestao_academica.drawio.png" height="80%" title="Diagrama de classes para sistema acadêmico" alt="Descrição de todas as entidades e seus relacionamentos">
+  <img src="Modelagem de classes/EQ3-UML-Gestao_academica.png" height="80%" title="Diagrama de classes para sistema acadêmico" alt="Descrição de todas as entidades e seus relacionamentos">
 </p>
 
 ## MER - Modelo entidade relacionamento
