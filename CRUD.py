@@ -6,6 +6,48 @@ from Funcionario import Funcionario
 from Professor import Professor
 from TecnAdministrativo import TecnAdministrativo
 
+def menu():
+    print("o que você deseja fazer?" /n "digite o número correspondente:")
+    print("01 Cadastrar")
+    print("02 Alterar dados")
+    print("03 Excluir dados")
+    print("04 Apagar dados")
+
+if menu == 0:
+
+    elif menu == 1:
+        #cadastrar: aluno, curso, Disciplina, Funcionario, professor, tecAdmin
+        opcao = int (
+             input(
+                "Cadastrar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
+            )
+        )
+
+
+    elif menu == 2:
+        #alterar:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
+        opcao = int (
+             input(
+                "Alterar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
+            )
+        )
+
+    elif menu == 3:
+        #excluir:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
+        opcao = int (
+             input(
+                "Excluir: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina? "
+            )
+        )
+
+    elif menu == 4:
+        #consultar:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
+        opcao = int (
+             input(
+                "Consultar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
+            )
+        )
+        
 #cadastro
 class faculdade:
     def __init__(self):
