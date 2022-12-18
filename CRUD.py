@@ -6,6 +6,7 @@ from Funcionario import Funcionario
 from Professor import Professor
 from TecnAdministrativo import TecnAdministrativo
 
+
 def menu():
     print("o que você deseja fazer?" /n "digite o número correspondente:")
     print("01 Cadastrar")
