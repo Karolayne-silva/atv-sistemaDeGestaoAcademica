@@ -2,34 +2,34 @@ from conexaoDB import *
 
 class Aluno:
 
-    def __init__(self, nome, matricula, cpf, curso):
-        self.nome = nome
-        self.matricula = matricula
-        self.cpf = cpf
-        self.curso = curso
+    def __init__(self, __nome, __matricula, __cpf, __curso):
+        self.__nome = __nome
+        self.__matricula = __matricula
+        self.__cpf = __cpf
+        self.__curso = __curso
 
 
     def cadastrar(self):
         c = ConexaoDB()
-        comando = f"insert into aluno (nome, matricula, cpf, curso) values ('{self.nome}','{self.matricula}', '{self.cpf}', '{self.curso}')"
+        comando = f"insert into aluno (nome, matricula, cpf, curso) values ('{self.__nome}','{self.__matricula}', '{self.__cpf}', '{self.__curso}')"
         c.executarDML(comando)
 
 
-    def alterar(self, nome, cpf):
+    def alterar(self, __nome, __cpf):
         c = ConexaoDB()
-        comando = f"update aluno set nome ='{nome}' where cpf='{cpf}'"
+        comando = f"update aluno set nome ='{__nome}' where cpf='{__cpf}'"
         c.executarDML(comando)
     
 
-    def excluir(self, nome):
+    def excluir(self, __nome):
         c = ConexaoDB()
-        comando = f"delete from aluno where nome='{nome}'"
+        comando = f"delete from aluno where nome='{__nome}'"
         c.executarDML(comando)
 
 
-    def consultar(self, nome):
+    def consultar(self, __nome):
         c = ConexaoDB()
-        comando = f"select * from pessoa where nome='{nome}'"
+        comando = f"select * from pessoa where nome='{__nome}'"
         resultado = c.executarDQL(comando)
         return resultado
     
