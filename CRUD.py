@@ -6,53 +6,8 @@ from Funcionario import Funcionario
 from Professor import Professor
 from TecnAdministrativo import TecnAdministrativo
 
-
-def menu():
-
-    print("o que você deseja fazer? /n digite o número correspondente:")
-    input("1-Cadastrar /n 2-Alterar /n 3-Excluir /n 4-Consultar")
-
-
-
-    if menu == 0:
-        #cadastrar: aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-        opcao = int (
-             input(
-                "Cadastrar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
-            )
-        )
-
-
-    if menu == 1:
-        #alterar:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-        opcao = int (
-             input(
-                "Alterar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
-            )
-        )
-
-    if menu == 2:
-        #excluir:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-        opcao = int (
-             input(
-                "Excluir: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina? "
-            )
-        )
-
-    if menu == 3:
-        #consultar:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-        opcao = int (
-             input(
-                "Consultar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
-            )
-        )
-        
-#cadastro
-#class faculdade:
-#    def __init__(self):
-#        pass
-    a = Aluno()
 ########################################################################################
+
 
 def menu():
   opcao = 0
@@ -65,7 +20,7 @@ def menu():
       #cadastrar: aluno, curso, Disciplina, Funcionario, professor, tecAdmin
       opcao_cadastro = int (
         input(
-          "Cadastrar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
+          "Cadastrar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina /n 5-Técnico administrativo"
         )
       )
       if opcao_cadastro == 1:
@@ -95,9 +50,9 @@ def menu():
 
       elif opcao_cadastro == 3:
         # cadastrar curso
-        codigo =
-        nome =
-        duracao =
+        codigo = input("Informe o código do curso: ")
+        nome = input("Informe o nome do curso: ")
+        duracao = input("Informe a duração do curso: ")
         curso = Curso(codigo, nome, duracao)
         curso.cadastrar()
         print("Curso cadastrado com sucesso!")
@@ -105,16 +60,16 @@ def menu():
 
       elif opcao_cadastro == 4:
         # cadastrar disciplina
-        codigo =
-        nome =
-        carga_horaria = 
+        codigo = input("Informe o código da disciplina: ")
+        nome = input("Informe o nome da disciplina: ")
+        carga_horaria = input("Informe a carga horária da disciplina: ")
         disciplina = Disciplina
         disciplina.cadastrar(codigo, nome, duracao)
         print("Disciplina cadstrada com sucesso!")
 
 
       elif opcao_cadastro ==5:
-        # cadastrar funcionario
+        # cadastrar técnico administrativo
 
 
 
@@ -124,7 +79,7 @@ def menu():
       #alterar:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
       opcao_alteracao = int (
         input(
-          "Alterar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
+          "Alterar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina /n 5-Técnico administrativo"
         )
       )
       if opcao_alteracao == 1:
@@ -167,7 +122,7 @@ def menu():
 
 
       elif opcao_alteracao ==5:
-        # alterar funcionario
+        # alterar técnico administrativo
 
 
 
@@ -180,7 +135,7 @@ def menu():
       #excluir:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
       opcao_exclusao = int (
         input(
-          "Excluir: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
+          "Excluir: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina /n 5-Técnico administrativo"
         )
       )
       if opcao_exclusao == 1:
@@ -209,7 +164,7 @@ def menu():
 
         elif opcao_exclusao == 3:
         # excluir disciplina
-        nome = 
+        nome = input("Informe o nome da disciplina a ser excluida: ")
         disciplina = Disciplina
         disciplina.excluir()
         print("Disciplina excluida com sucesso!")
@@ -217,7 +172,7 @@ def menu():
 
 
         elif opcao_exclusao == 4:
-        # excluir funcionário
+        # excluir técnico administrativo
 
 
 
@@ -227,7 +182,7 @@ def menu():
         #consultar: aluno, curso, Disciplina, Funcionario, professor, tecAdmin
         opcao_consultar = int (
             input(
-                "Consultar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina "
+                "Consultar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina /n 5-Técnico administrativo"
             )
         )
         if opcao_consultar ==1:
@@ -243,8 +198,6 @@ def menu():
         cpf = input("Informe o CPF do professor a ser consultado: ")
         professor._consultar(cpf)
         print("hola")
-
-
 
 
 
@@ -265,6 +218,9 @@ def menu():
         print("hehe")
 
 
+        elif opcao_exclusao == 4:
+        # excluir técnico administrativo
+
 
 
 
@@ -273,70 +229,3 @@ def menu():
 
 
 ########################################################################################
-
-
-
-
-
-
-    if opcao == 1
-    def cadastro(self):
-        print("\n Para realizar o cadastro, informe os dados abaixo:")
-    
-        self.nome = input("Digite o seu nome:")
-        self.cpf = input('Digite o seu CPF:')
-        self.matricula = input('Digite a sua matrícula:')
-        self.curso = input('Digite o seu curso:')
-
-        print("\n Cadastro realizado com sucesso!")
-        
-        ##colocar o try/except caso necessário
-    
-#consultar
-    if opcao == 2:
-     def consultar(self):
-        print("Qual informação gostaria de verificar?")
-        print("\n 1. Funcionário\n 2. Aluno\n 3.Curso\n 4. Disciplina")
-        opcao_consult = int(input("\nOpção: "))
-        
-        if opcao_consult == 1:
-        self.nome = input("Informe o nome do funcionário:")
-        ##try:
-                ##c = ConexaoDB() # faz a conexão com o banco 
-                ##sql = f"select * from funcionarios where CPF='{self.CPF}'" # define o que será feito na tabela funcionário
-                ##c.executarDQL(sql)
-                ##print("essas são as informações dos funcionários")
-                ##c.desconectar()
-            ##except Error as ex:
-                ##print('Erro de conexão:', ex)
-        print("As informações disponíveis desse funcionário, são:")
-        print("Deseja consultar mais alguma informação?")
-        opcao_consult = int(input("\n 1. Funcionário\n 2. Aluno\n 3.Curso\n 4. Disciplina\n 5. Voltar ao menu"))
-        if opcao_consult == 1
-        self.consultar()
-        elif opcao_consult == 5
-        self.menu()
-#deletar
-if opcaou == 3: 
-    def deletar(self):
-        print("O que deseja deletar?")
-        print("\n 1. Funcionário\n 2. Aluno\n 3.Curso\n 4. Disciplina")
-        opcao_delete = int(input("\nOpção:"))
-        if opcao_delete == 4:
-            print("Qual disciplina deseja deletar?")
-            print("Insira o código da disciplina:")
-            self.codigo = input("Código:")
-#atualizar
-if opcao == 2:
-    def atualizar(self):
-        print("O que deseja atualizar?")
-        print("\n 1. Funcionário\n 2. Aluno\n 3.Curso\n 4. Disciplina")
-        opcao_att = int(input("Opção:"))
-
-        if opcao_att = 1:
-            self.nome = input("Digite o novo nome:")
-            self.cpf = input("Informe o CPF:")
-
-
-
-
