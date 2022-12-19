@@ -34,7 +34,6 @@ def menu():
         print("Aluno cadastrado com sucesso!")
 
 
-
       elif opcao_cadastro == 2:
         # cadastrar professor
         nome = input("Informe o nome do professor: ")
@@ -47,6 +46,7 @@ def menu():
         professor = Professor(nome, endereco, telefone, cpf, salario, titulacao, area_formacao)
         professor._cadastrar()
         print("Professor cadastrado com sucesso!")
+
 
       elif opcao_cadastro == 3:
         # cadastrar curso
@@ -68,7 +68,7 @@ def menu():
         print("Disciplina cadstrada com sucesso!")
 
 
-      elif opcao_cadastro ==5:
+      #elif opcao_cadastro ==5:
         # cadastrar técnico administrativo
 
 
@@ -109,8 +109,6 @@ def menu():
         print("Curso alterado com sucesso!")
       
 
-
-
       elif opcao_alteracao == 4:
         # alterar disciplina
         codigo = ("Informe o novo código da disciplina: ")
@@ -121,11 +119,8 @@ def menu():
         print("Disciplina alterada com sucesso!")
 
 
-      elif opcao_alteracao ==5:
+     # elif opcao_alteracao ==5:
         # alterar técnico administrativo
-
-
-
 
 
 
@@ -146,14 +141,14 @@ def menu():
         print("Aluno Excluido com sucesso!")
 
 
-        elif opcao_exclusao == 2:
+      elif opcao_exclusao == 2:
         # excluir professor
         cpf = input("Informe o CPF do professor que você deseja excluir: ")
         professor = Professor
         professor._excluir(cpf)
         print("Professor excluido com sucesso!")
 
-        elif opcao_exclusao == 2:
+      elif opcao_exclusao == 3:
         # excluir curso
         nome = input("Informe o nome do curso a ser excluido: ")
         curso = Curso
@@ -161,8 +156,7 @@ def menu():
         print("Curso excluido com sucesso!")
 
 
-
-        elif opcao_exclusao == 3:
+      elif opcao_exclusao == 4:
         # excluir disciplina
         nome = input("Informe o nome da disciplina a ser excluida: ")
         disciplina = Disciplina
@@ -170,22 +164,20 @@ def menu():
         print("Disciplina excluida com sucesso!")
 
 
-
-        elif opcao_exclusao == 4:
+      #elif opcao_exclusao == 5:
         # excluir técnico administrativo
-
 
 
 
 
     elif opcao == 4:
         #consultar: aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-        opcao_consultar = int (
-            input(
-                "Consultar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina /n 5-Técnico administrativo"
-            )
+      opcao_consultar = int (
+        input(
+          "Consultar: /n 1-Aluno /n 2-Professor /n 3-Curso /n 4-Disciplina /n 5-Técnico administrativo"
         )
-        if opcao_consultar ==1:
+      )
+      if opcao_consultar ==1:
         # consultar aluno
         nome = input("Informe o nome do aluno a ser consultado: ")
         aluno = Aluno(nome)
@@ -193,15 +185,14 @@ def menu():
         print("eh isto")
 
 
-        elif opcao_consultar == 2:
+      elif opcao_consultar == 2:
         # consultar professor
         cpf = input("Informe o CPF do professor a ser consultado: ")
         professor._consultar(cpf)
         print("hola")
 
 
-
-        elif opcao_consultar == 3:
+      elif opcao_consultar == 3:
         # consultar curso
         nome = input("Informe o nome do curso a ser consultada: ")
         curso = Curso
@@ -209,17 +200,16 @@ def menu():
         print("rs")
 
 
-
-        elif opcao_consultar == 4:
+      elif opcao_consultar == 4:
         # consultar disciplina
         nome = input("Informe o nome da disciplina a ser consultada: ")
         disciplina = Disciplina
         disciplina.consultar(nome)
         print("hehe")
+        
 
-
-        elif opcao_exclusao == 4:
-        # excluir técnico administrativo
+       # elif opcao_consultar == 5:
+          # consultar técnico administrativo
 
 
 
