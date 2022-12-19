@@ -13,9 +13,9 @@ class Disciplina:
         c.executarDML(comando)
 
 
-    def alterar(self, __cargaHoraria, __nome):
+    def alterar(self, __carga_horaria, __nome):
         c = ConexaoDB()
-        comando = f"update disciplina set cargaHoraria ='{__cargaHoraria}' where nome='{__nome}'"
+        comando = f"update disciplina set cargaHoraria ='{__carga_horaria}' where nome='{__nome}'"
         c.executarDML(comando)
     
 
