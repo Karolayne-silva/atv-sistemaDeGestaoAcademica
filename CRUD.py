@@ -2,21 +2,27 @@ from conexaoDB import *
 from Aluno import Aluno
 from Curso import Curso
 from Disciplina import Disciplina
-from Funcionario import *
 from Professor import Professor
 from TecnAdministrativo import TecnAdministrativo
-
+ 
 ########################################################################################
 
 def menu():
   opcao = 0
+  aluno = Aluno
+  professor = Professor
+  curso = Curso
+  disciplina =  Disciplina
+  tecadmin = TecnAdministrativo
+  
+  
   while opcao != 5:
     print("O que você deseja fazer? \n1-Cadastrar \n2-Alterar \n3-Excluir \n4-Consultar \n5-Sair\n")
     opcao = int(input("Digite o número correspondente: "))
 
     if opcao == 1:
       #cadastrar: aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-      print("Cadastro de: \n1-Aluno \n2-Professor \n3-Curso \n4-Disciplina \n5-Técnico administrativo\n")
+      print("Cadastro de: \n1-Aluno \n2-Professor \n3-Curso \n4-Disciplina \n5-Técnico administrativo\n: ")
       opcao_cadastro = int(input("Digite o número correspondente: "))
       # Opções:
       if opcao_cadastro == 1:
@@ -39,7 +45,7 @@ def menu():
         titulacao = input("Informe a titulação do professor: ")
         area_formacao = input("Informe a área de formação do professor: ")
         professor = Professor(nome, endereco, telefone, cpf, salario, titulacao, area_formacao)
-        professor._cadastrar()
+        professor.cadastrar()
         print("Professor cadastrado com sucesso!")
 
       elif opcao_cadastro == 3:
@@ -70,7 +76,7 @@ def menu():
         cpf = input("Informe o CPF do técnico: ")
         salario = input("Informe o salário do técnico: ")
         tecadmin = TecnAdministrativo(nome, endereco, telefone, cpf, salario)
-        tecadmin._cadastrar()
+        tecadmin.cadastrar()
         print("Técnico cadastrado com sucesso!")
       
 
@@ -79,38 +85,35 @@ def menu():
       opcao_alteracao = int(input("Alterar: \n1-Aluno \n2-Professor \n3-Curso \n4-Disciplina \n5-Técnico administrativo"))
       if opcao_alteracao == 1:
         # alterar aluno
-        nome = input("Informe o novo nome do aluno: ")
-        cpf = input("Informe o CPF do aluno a ser alterado: ")
-        aluno = Aluno(nome, cpf)
-        aluno.alterar()
+        nome = str(input("Informe o novo nome do aluno: "))
+        cpf = str(input("Informe o CPF do aluno a ser alterado: "))
+        aluno.alterar(cpf, nome)
         print("Aluno alterado com sucesso!")
+
 
 
       elif opcao_alteracao == 2:
         # alterar professor
         nome = input("Informe o novo nome do professor: ")
         cpf = input("Informe o CPF do professor a ser alterado: ")
-        professor = Professor(nome, cpf)
-        professor._alterar()
+        professor.alterar(nome, cpf)
         print("Professor alterado com sucesso!")
 
 
       elif opcao_alteracao == 3:
         # alterar curso
-        nome = ("Informe o novo nome do professor: ")
-        codigo = ("Informe o novo código do curso: ")
-        curso = Curso(nome, codigo)
-        curso.alterar()
-        print("Curso alterado com sucesso!")
+        nome = input("Informe o novo nome do curso: ")
+        codigo = input("Informe o novo código do curso: ")
+        curso.alterar(nome, codigo)
+        print("\nCurso alterado com sucesso!")
       
 
       elif opcao_alteracao == 4:
         # alterar disciplina
-        codigo = ("Informe o novo código da disciplina: ")
-        nome = ("Informe o novo nome da disciplina: ")
-        carga_horaria = ("Informe a nova carga horária da disciplina: ")
-        disciplina = Disciplina(codigo, nome, duracao)
-        disciplina.alterar()
+        codigo = input("Informe o novo código da disciplina: ")
+        nome = input("Informe o novo nome da disciplina: ")
+        carga_horaria = input("Informe a nova carga horária da disciplina: ")
+        disciplina.alterar(codigo, nome, carga_horaria)
         print("Disciplina alterada com sucesso!")
 
 
@@ -118,8 +121,7 @@ def menu():
         # alterar técnico administrativo
         nome = input("Informe o novo nome do nome do técnico administrativo: ")
         cpf =  input("Informe o novo CPF do técnico administrativo: ")
-        tecadmin = TecnAdministrativo(nome, cpf)
-        tecadmin._alterar()
+        tecadmin.alterar(nome, cpf)
         print("Técnico Administrativo alterado com sucesso!")
 
 
@@ -130,39 +132,34 @@ def menu():
       if opcao_exclusao == 1:
         # excluir aluno
         nome = input("Informe o nome do aluno a ser excluido: ")
-        aluno = Aluno(nome)
-        aluno.excluir()
+        aluno.excluir(nome)
         print("Aluno Excluido com sucesso!")
 
 
       elif opcao_exclusao == 2:
         # excluir professor
         cpf = input("Informe o CPF do professor que você deseja excluir: ")
-        professor = Professor(cpf)
-        professor._excluir()
+        professor.excluir(cpf)
         print("Professor excluido com sucesso!")
 
       elif opcao_exclusao == 3:
         # excluir curso
         nome = input("Informe o nome do curso a ser excluido: ")
-        curso = Curso(nome)
-        curso.excluir()
+        curso.excluir(nome)
         print("Curso excluido com sucesso!")
 
 
       elif opcao_exclusao == 4:
         # excluir disciplina
         nome = input("Informe o nome da disciplina a ser excluida: ")
-        disciplina = Disciplina(nome)
-        disciplina.excluir()
+        disciplina.excluir(nome)
         print("Disciplina excluida com sucesso!")
 
 
       elif opcao_exclusao == 5:
         # excluir técnico administrativo
         cpf = input("Infomre o CPF do técnico a ser excluido: ")
-        tecadmin = TecnAdministrativo(cpf)
-        tecadmin._alterar()
+        tecadmin.alterar(cpf)
         print("Técnico administrativo excluído com sucesso!")
 
 
@@ -172,36 +169,31 @@ def menu():
       if opcao_consultar ==1:
         # consultar aluno
         nome = input("Informe o nome do aluno a ser consultado: ")
-        aluno = Aluno(nome)
-        aluno.consultar()
+        aluno.consultar(nome)
 
 
       elif opcao_consultar == 2:
         # consultar professor
         cpf = input("Informe o CPF do professor a ser consultado: ")
-        professor = Professor(cpf)
-        professor._consultar()
+        professor.consultar(cpf)
 
 
       elif opcao_consultar == 3:
         # consultar curso
         nome = input("Informe o nome do curso a ser consultada: ")
-        curso = Curso(nome)
-        curso.consultar()
+        curso.consultar(nome)
 
 
       elif opcao_consultar == 4:
         # consultar disciplina
         nome = input("Informe o nome da disciplina a ser consultada: ")
-        disciplina = Disciplina(nome)
-        disciplina.consultar()
+        disciplina.consultar(nome)
         
 
       elif opcao_consultar == 5:
         # consultar técnico administrativo
         cpf = input("Informe o CPF do técnico administrativo: ")
-        tecadmin = TecnAdministrativo(cpf)
-        tecadmin._alterar()
+        tecadmin.alterar(cpf)
 
 
 menu()

@@ -1,34 +1,34 @@
-from conexaoDB import *
+from conexaoDB import ConexaoDB
 
 class Curso:
-    def __init__(self, __codigo, __nome, __duracao):
-        self.__codigo = __codigo
-        self.__nome = __nome
+    def __init__(self, codigo, nome, __duracao):
+        self.codigo = codigo
+        self.nome = nome
         self.__duracao = __duracao
      
     
 
     def cadastrar(self):
         c = ConexaoDB()
-        comando = f"insert into curso (codigo, nome, duracao) values ('{self.__codigo}','{self.__nome}', '{self.__duracao}')"
+        comando = f"insert into curso (codigo, nome, duracao) values ('{self.codigo}','{self.nome}', '{self.__duracao}')"
         c.executarDML(comando)
 
 
-    def alterar(self, __nome, __codigo):
+    def alterar(nome, codigo):
         c = ConexaoDB()
-        comando = f"update curso set nome ='{__nome}' where codigo='{__codigo}'"
+        comando = f"update curso set nome ='{nome}' where codigo='{codigo}'"
         c.executarDML(comando)
     
 
-    def excluir(self, __nome):
+    def excluir(nome):
         c = ConexaoDB()
-        comando = f"delete from curso where nome='{__nome}'"
+        comando = f"delete from curso where nome='{nome}'"
         c.executarDML(comando)
 
 
-    def consultar(self, __nome):
+    def consultar(nome):
         c = ConexaoDB()
-        comando = f"select * from curso where nome='{__nome}'"
+        comando = f"select * from curso where nome='{nome}'"
         resultado = c.executarDQL(comando)
         return resultado
 
