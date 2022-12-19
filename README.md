@@ -39,5 +39,5 @@ nome, endereço, telefone, CPF e salário.
 
 ## MER - Modelo entidade relacionamento
 <p align="center">
-  <img src="Banco de dados/MER.svg" height="80%" title="Diagrama do Banco de Dados Entidade Relacionamento" alt="Descrição de todas as entidades (tabelas) e seus relacionamentos">
+  <img src="Banco de dados/MER.png" height="80%" title="Diagrama do Banco de Dados Entidade Relacionamento" alt="Descrição de todas as entidades (tabelas) e seus relacionamentos">
 </p>
