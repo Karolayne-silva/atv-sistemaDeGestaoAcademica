@@ -34,10 +34,10 @@ nome, endereço, telefone, CPF e salário.
 ## UML - Diagrama de classes
 
 <p align="center">
-  <img src="Modelagem de classes/EQ3-UML-Gestao_academica.png" height="80%" title="Diagrama de classes para sistema acadêmico" alt="Descrição de todas as entidades e seus relacionamentos">
+  <img src="Modelagem de classes/EQ3-UML-Gestao_academica.jpg" height="80%" title="Diagrama de classes para sistema acadêmico" alt="Descrição de todas as entidades e seus relacionamentos">
 </p>
 
 ## MER - Modelo entidade relacionamento
 <p align="center">
-  <img src="Banco de dados/MER.svg" height="80%" title="Diagrama do Banco de Dados Entidade Relacionamento" alt="Descrição de todas as entidades (tabelas) e seus relacionamentos">
+  <img src="Banco de dados/MER.png" height="80%" title="Diagrama do Banco de Dados Entidade Relacionamento" alt="Descrição de todas as entidades (tabelas) e seus relacionamentos">
 </p>
