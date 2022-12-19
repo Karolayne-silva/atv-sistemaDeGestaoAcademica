@@ -1,28 +1,22 @@
-from conexaoDB import ConexaoDB
-from Aluno import Aluno
-from Curso import Curso
-from Disciplina import Disciplina
-from Funcionario import Funcionario
-from Professor import Professor
-from TecnAdministrativo import TecnAdministrativo
+from conexaoDB import *
+from Aluno import *
+from Curso import *
+from Disciplina import *
+from Funcionario import *
+from Professor import *
+from TecnAdministrativo import *
 
 ########################################################################################
-
 
 def menu():
   opcao = 0
   while opcao != 5:
     print("o que você deseja fazer? \n digite o número correspondente:")
-    print("1-Cadastrar \n 2-Alterar \n 3-Excluir \n 4-Consultar \n 5-Sair")
-    opcao = int(input())
+    opcao = int(input("1-Cadastrar \n 2-Alterar \n 3-Excluir \n 4-Consultar \n 5-Sair"))
 
     if opcao == 1:
       #cadastrar: aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-      opcao_cadastro = int (
-        input(
-          "Cadastrar: \n 1-Aluno \n 2-Professor \n 3-Curso \n 4-Disciplina \n 5-Técnico administrativo"
-        )
-      )
+      opcao_cadastro = int(input("Cadastrar: \n 1-Aluno \n 2-Professor \n 3-Curso \n 4-Disciplina \n 5-Técnico administrativo"))
       if opcao_cadastro == 1:
         # cadastrar aluno
         nome = input("Informe o nome do aluno: ")
@@ -82,11 +76,7 @@ def menu():
 
     elif opcao == 2:
       #alterar:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-      opcao_alteracao = int (
-        input(
-          "Alterar: \n 1-Aluno \n 2-Professor \n 3-Curso \n 4-Disciplina \n 5-Técnico administrativo"
-        )
-      )
+      opcao_alteracao = int(input("Alterar: \n 1-Aluno \n 2-Professor \n 3-Curso \n 4-Disciplina \n 5-Técnico administrativo"))
       if opcao_alteracao == 1:
         # alterar aluno
         nome = input("Informe o novo nome do aluno: ")
@@ -136,11 +126,7 @@ def menu():
 
     elif opcao == 3:
       #excluir:  aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-      opcao_exclusao = int (
-        input(
-          "Excluir: \n 1-Aluno \n 2-Professor \n 3-Curso \n 4-Disciplina \n 5-Técnico administrativo"
-        )
-      )
+      opcao_exclusao = int(input("Excluir: \n 1-Aluno \n 2-Professor \n 3-Curso \n 4-Disciplina \n 5-Técnico administrativo"))
       if opcao_exclusao == 1:
         # excluir aluno
         nome = input("Informe o nome do aluno a ser excluido: ")
@@ -182,11 +168,7 @@ def menu():
 
     elif opcao == 4:
         #consultar: aluno, curso, Disciplina, Funcionario, professor, tecAdmin
-      opcao_consultar = int (
-        input(
-          "Consultar: \n 1-Aluno \n 2-Professor \n 3-Curso \n 4-Disciplina \n 5-Técnico administrativo"
-        )
-      )
+      opcao_consultar = int(input("Consultar: \n 1-Aluno \n 2-Professor \n 3-Curso \n 4-Disciplina \n 5-Técnico administrativo"))
       if opcao_consultar ==1:
         # consultar aluno
         nome = input("Informe o nome do aluno a ser consultado: ")
@@ -214,11 +196,11 @@ def menu():
         disciplina.consultar(nome)
         
 
-        elif opcao_consultar == 5:
-          # consultar técnico administrativo
-          cpf = input("Informe o CPF do técnico administrativo: ")
-          tecadmin = TecnAdministrativo
-          tecadmin._alterar(cpf)
+      elif opcao_consultar == 5:
+        # consultar técnico administrativo
+        cpf = input("Informe o CPF do técnico administrativo: ")
+        tecadmin = TecnAdministrativo
+        tecadmin._alterar(cpf)
 
 
 
